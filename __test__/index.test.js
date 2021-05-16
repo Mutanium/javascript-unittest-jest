@@ -1,6 +1,12 @@
-function add(num1,num2) {
-    return num1 + num2;
-}
+
+//const add = require('../index').add;
+//const findByName = require('../index').findByName;
+// kunnen we destructuren tot:
+//const { findByName } = require('../index');
+// en nog verder:
+
+const { add, findByName } = require('../index');
+
 
 
 
@@ -16,18 +22,7 @@ test ("The add function adds two numbers and returns the sum",() => {
     expect(sum).toBe(15);
 })
 
-function findByName(names,user) {
-    //ietereer over de array
-    //vergelijk iedere entry met de use
-    //als namen overeenkomen moet het gehele object worden teruggegeven
-    for(let i=0; i< names.length; i++) {
-        const currentUser = names[i];
-        if (currentUser.name === user) {
-            return currentUser;
-        }
-    }
-    return null;
-}
+
 
 test("findByName will return an object from an array with the specified name", ()=> {
     //Arrange
